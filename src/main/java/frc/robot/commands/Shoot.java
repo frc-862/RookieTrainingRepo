@@ -23,14 +23,14 @@ public class Shoot extends CommandBase {
   @Override
   public void initialize() {
     startTime = Timer.getFPGATimestamp();
-    shooter.setPower(Constants.SHOOTER_POWER);
+    // TODO: set the shooter power to the constant value (Constants.SHOOTER_POWER)
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
     if ((Timer.getFPGATimestamp() - startTime) >= 1) {
-      indexer.setPower(Constants.INDEXER_POWER);
+      // TODO: set indexer power
     }
   }
 
