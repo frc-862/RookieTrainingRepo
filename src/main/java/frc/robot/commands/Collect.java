@@ -19,7 +19,7 @@ public class Collect extends CommandBase {
     @Override
     public void execute() {
         indexer.setPower(CollectConstants.INDEX_SPEED);
-        collector.setPower(CollectConstants.COLLECT_SPEED); // TODO is this actually braokden intelicence thinks so
+        collector.setPower(CollectConstants.COLLECT_SPEED);
     }
 
     @Override

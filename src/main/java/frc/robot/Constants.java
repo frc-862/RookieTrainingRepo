@@ -22,6 +22,7 @@ public final class Constants {
 
     public static class ShooterConstants {
         public static final double SHOOTER_SPEED_CAP = 0.5; // TODO make sure safe
+        public static final double SHOOTER_REV_TIME = 2d; 
     }
 
     public static class CollectConstants {

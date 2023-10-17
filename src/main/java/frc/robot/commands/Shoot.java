@@ -3,6 +3,7 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Constants.CollectConstants;
+import frc.robot.Constants.ShooterConstants;
 import frc.robot.subsystems.Indexer;
 import frc.robot.subsystems.Shooter;
 
@@ -19,13 +20,13 @@ public class Shoot extends CommandBase {
     @Override
     public void initialize() {
         startTime = Timer.getFPGATimestamp();
-        shooter.setPower(1);
+        shooter.setPower(ShooterConstants.SHOOTER_SPEED_CAP);
     }
 
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        if ((Timer.getFPGATimestamp() - startTime) >= 1) {
+        if ((Timer.getFPGATimestamp() - startTime) >= ShooterConstants.SHOOTER_REV_TIME) {
             indexer.setPower(CollectConstants.INDEX_SPEED);
         }
     }

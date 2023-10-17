@@ -5,7 +5,6 @@ import com.ctre.phoenix.motorcontrol.can.TalonFX;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.RobotMap;
-import frc.robot.Constants.ShooterConstants;
 
 public class Shooter extends SubsystemBase {
     public final TalonFX shooterMotor;
@@ -20,7 +19,7 @@ public class Shooter extends SubsystemBase {
     }
     
     public void setPower(double power) {
-        shooterMotor.set(TalonFXControlMode.PercentOutput, power * ShooterConstants.SHOOTER_SPEED_CAP);
+        shooterMotor.set(TalonFXControlMode.PercentOutput, power);
     }
 
     public void stop() {
