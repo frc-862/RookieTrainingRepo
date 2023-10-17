@@ -5,7 +5,6 @@ import frc.robot.subsystems.*;
 import frc.robot.commands.*;
 import frc.robot.constants.JoystickConstants;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.StartEndCommand;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 
 public class RobotContainer {
@@ -16,11 +15,12 @@ public class RobotContainer {
 
     public RobotContainer() {
         configureBindings();
-        indexer.setDefaultCommand(new Index(indexer, () -> driver.getRightTriggerAxis()-driver.getLeftTriggerAxis()));
     }
 
     private void configureBindings() {
-        new Trigger(driver::getAButton).whileTrue(new StartEndCommand(shooter::spin, shooter::stop, shooter));
+        new Trigger(driver::getAButton).whileTrue(new Shoot(shooter, indexer));
+
+        indexer.setDefaultCommand(new Index(indexer, () -> driver.getRightTriggerAxis()-driver.getLeftTriggerAxis()));
     }
 
     public Command getAutonomousCommand() { return null; }

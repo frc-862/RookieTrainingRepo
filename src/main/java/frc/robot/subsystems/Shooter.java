@@ -13,11 +13,11 @@ public class Shooter extends SubsystemBase {
         CommandScheduler.getInstance().registerSubsystem(this);
     }
 
-    public void spin() {
-        shooterMotor.set(Constants.SHOOTER_POWER);
+    public void setPower(double power) {
+        shooterMotor.set(power);
     }
 
     public void stop() {
-        shooterMotor.set(0d);
+        setPower(0d);
     }
 }
