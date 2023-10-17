@@ -1,0 +1,29 @@
+package frc.robot.subsystems;
+
+import com.ctre.phoenix.motorcontrol.TalonFXControlMode;
+import com.ctre.phoenix.motorcontrol.can.TalonFX;
+
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants.RobotMap;
+import frc.robot.Constants.ShooterConstants;
+
+public class Shooter extends SubsystemBase {
+    public final TalonFX shooterMotor;
+
+    public Shooter() {
+        shooterMotor = new TalonFX(RobotMap.INDEXER_MOTOR);
+    }
+
+    @Override
+    public void periodic() {
+
+    }
+    
+    public void setPower(double power) {
+        shooterMotor.set(TalonFXControlMode.PercentOutput, power * ShooterConstants.SHOOTER_SPEED_CAP);
+    }
+
+    public void stop() {
+        setPower(0d);
+    }
+}
