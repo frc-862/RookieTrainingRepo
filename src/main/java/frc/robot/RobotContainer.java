@@ -24,7 +24,7 @@ public class RobotContainer {
     // create subsystems
     private final Collector collector = new Collector();
     private final Indexer indexer = new Indexer();
-    private final Shooter shooter = new Shooter();
+    //TODO: Instatialize a Shooter Subsystem like the 2 above
 
     /** The container for the robot. Contains subsystems, OI devices, and commands. */
     public RobotContainer() {

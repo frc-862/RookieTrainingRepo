@@ -12,11 +12,6 @@ public class Collector extends SubsystemBase {
         collectMotor = new TalonFX(RobotMap.COLLECTOR_MOTOR);
     }
 
-    @Override
-    public void periodic() {
-        
-    }
-
     public void setPower(double power) {
         collectMotor.set(TalonFXControlMode.PercentOutput, power);
     }

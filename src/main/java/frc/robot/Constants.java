@@ -9,6 +9,7 @@ package frc.robot;
  * RobotMap holds the motor IDs
  */
 
+// EVERY Thing you need is here use these as constants
 public final class Constants {
     public static class ControllerConstants {
         public static final int DRIVER_CONTROLLER_PORT = 0;
@@ -22,6 +23,7 @@ public final class Constants {
 
     public static class ShooterConstants {
         public static final double SHOOTER_SPEED_CAP = 0.5; // TODO make sure safe
+        public static final double SHOOTER_REV_TIME = 1; 
     }
 
     public static class CollectConstants {
