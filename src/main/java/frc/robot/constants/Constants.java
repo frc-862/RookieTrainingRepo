@@ -4,9 +4,9 @@ public final class Constants {
     // Indexer
     public static final boolean INDEXER_INVERT = false;
     public static final double  INDEXER_DEADBAND = 0.05;
-    public static final double INDEXER_POWER = 0.7; //TODO: check
+    public static final double INDEXER_POWER = 1d; //TODO: check
 
     // Shooter
     public static final boolean SHOOTER_INVERT = true;
-    public static final double  SHOOTER_POWER = 1d;
+    public static final double  SHOOTER_POWER = 0.55d;
 }
