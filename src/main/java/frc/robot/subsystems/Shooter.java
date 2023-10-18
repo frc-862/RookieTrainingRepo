@@ -10,7 +10,7 @@ public class Shooter extends SubsystemBase {
     public final TalonFX shooterMotor;
 
     public Shooter() {
-        shooterMotor = new TalonFX(RobotMap.INDEXER_MOTOR);
+        shooterMotor = new TalonFX(RobotMap.FLYWHEEL_MOTOR);
     }
 
     @Override
