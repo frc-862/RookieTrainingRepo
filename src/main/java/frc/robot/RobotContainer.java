@@ -8,8 +8,8 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 
 public class RobotContainer {
-    private final Shooter shooter = new Shooter();
-    private final Indexer indexer = new Indexer();
+    
+    // TODO: create new private subsystems (indexer and shooter)
 
     public final XboxController driver = new XboxController(JoystickConstants.Ports.COPILOT);
 
@@ -18,9 +18,9 @@ public class RobotContainer {
     }
 
     private void configureBindings() {
-        new Trigger(driver::getAButton).whileTrue(new Shoot(shooter, indexer));
+        // TODO: map the A button to the Shoot command
 
-        indexer.setDefaultCommand(new Index(indexer, () -> driver.getRightTriggerAxis()-driver.getLeftTriggerAxis()));
+        // TODO: set indexer default command to run the indexer based on the triggers
     }
 
     public Command getAutonomousCommand() { return null; }
