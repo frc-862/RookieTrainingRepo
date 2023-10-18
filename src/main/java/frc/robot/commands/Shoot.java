@@ -13,6 +13,9 @@ public class Shoot extends CommandBase {
     private double startTime;
 
     public Shoot(Indexer indexer, Shooter shooter) {
+        this.shooter = shooter;
+        this.indexer = indexer;
+
         addRequirements(indexer, shooter);
     }
 
