@@ -2,14 +2,14 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.RobotMap;
-import com.ctre.phoenix.motorcontrol.can.TalonFX;
-import com.ctre.phoenix.motorcontrol.TalonFXControlMode;
+import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+import com.ctre.phoenix.motorcontrol.VictorSPXControlMode;
 
 public class Indexer extends SubsystemBase {
-    public final TalonFX indexMotor;
+    public final VictorSPX indexMotor;
 
     public Indexer() {
-        indexMotor = new TalonFX(RobotMap.INDEXER_MOTOR);
+        indexMotor = new VictorSPX(RobotMap.INDEXER_MOTOR);
     }
 
     @Override
@@ -18,7 +18,7 @@ public class Indexer extends SubsystemBase {
     }
     
     public void setPower(double power) {
-        indexMotor.set(TalonFXControlMode.PercentOutput, power);
+        indexMotor.set(VictorSPXControlMode.PercentOutput, power);
     }
 
     public void stop() {
