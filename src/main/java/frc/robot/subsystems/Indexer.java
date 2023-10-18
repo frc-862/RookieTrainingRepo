@@ -10,6 +10,7 @@ public class Indexer extends SubsystemBase {
 
     public Indexer() {
         indexerMotor = new Victor(RobotMap.INDEXER);
+        indexerMotor.setInverted(true);
         CommandScheduler.getInstance().registerSubsystem(this);
     }
 
