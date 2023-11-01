@@ -1,6 +1,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.Joystick;
 import frc.robot.subsystems.*;
 import frc.robot.commands.*;
 import frc.robot.constants.JoystickConstants;
@@ -10,6 +11,7 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
 public class RobotContainer {
     private final Shooter shooter = new Shooter();
     private final Indexer indexer = new Indexer();
+    private final Drivetrain drivetrain = new Drivetrain();
 
     public final Joystick driverLeft = new Joystick(JoystickConstants.Ports.DRIVER_LEFT);
     public final Joystick driverRight = new Joystick(JoystickConstants.Ports.DRIVER_RIGHT);

@@ -10,16 +10,17 @@ public class Drive extends CommandBase {
 	private DoubleSupplier powerLeft;
 	private DoubleSupplier powerRight;
 
-	public Drive(){
+	public Drive(Drivetrain drivetrain, DoubleSupplier powerLeft, DoubleSupplier powerRight){
 		this.drivetrain = drivetrain;
-		this.power = power;
+		this.powerLeft = powerLeft;
+		this.powerRight = powerRight;
 		addRequirements(drivetrain);
 	}
 
 	@Override
 	public void execute(){
-		drivetrain.setLeftPower(power.getAsDouble);
-		drivetrain.setRightPower(power.getAsDouble);
+		drivetrain.setLeftPower(powerLeft.getAsDouble());
+		drivetrain.setRightPower(powerRight.getAsDouble());
 	}
 
 	@Override
