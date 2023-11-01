@@ -13,7 +13,7 @@ public class RobotContainer {
     private Indexer indexer = new Indexer();
     private Shooter shooter = new Shooter();
 
-    public final XboxController driver = new XboxController(JoystickConstants.Ports.COPILOT);
+    public final XboxController coPilot = new XboxController(JoystickConstants.Ports.COPILOT);
 
     public RobotContainer() {
         configureBindings();
@@ -21,7 +21,7 @@ public class RobotContainer {
 
     private void configureBindings() {
         // TODO: map the A button to the Shoot command
-        new Trigger(driver::getAButton).whileTrue(new Shoot(shooter, indexer)); 
+        new Trigger(coPilot::getAButton).whileTrue(new Shoot(shooter, indexer)); 
         
         // TODO: set indexer default command to run the indexer based on the triggers
         
