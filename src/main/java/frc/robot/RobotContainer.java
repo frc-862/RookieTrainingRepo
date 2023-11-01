@@ -11,16 +11,20 @@ public class RobotContainer {
     private final Shooter shooter = new Shooter();
     private final Indexer indexer = new Indexer();
 
-    public final XboxController driver = new XboxController(JoystickConstants.Ports.COPILOT);
+    public final Joystick driverLeft = new Joystick(JoystickConstants.Ports.DRIVER_LEFT);
+    public final Joystick driverRight = new Joystick(JoystickConstants.Ports.DRIVER_RIGHT);
+    public final XboxController coPilot = new XboxController(JoystickConstants.Ports.COPILOT);
 
     public RobotContainer() {
         configureBindings();
     }
 
     private void configureBindings() {
-        new Trigger(driver::getAButton).whileTrue(new Shoot(shooter, indexer));
+        new Trigger(coPilot::getAButton).whileTrue(new Shoot(shooter, indexer));
 
-        indexer.setDefaultCommand(new Index(indexer, () -> driver.getRightTriggerAxis()-driver.getLeftTriggerAxis()));
+        indexer.setDefaultCommand(new Index(indexer, () -> coPilot.getRightTriggerAxis()-coPilot.getLeftTriggerAxis()));
+
+        drivetrain.setDefaultCommand(new Drive(drivetrain, () -> driverLeft.getY(), () -> driverRight.getY()));
     }
 
     public Command getAutonomousCommand() { return null; }
