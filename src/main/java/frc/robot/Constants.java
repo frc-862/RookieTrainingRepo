@@ -11,18 +11,29 @@ package frc.robot;
 
 public final class Constants {
     public static class ControllerConstants {
-        public static final int DRIVER_CONTROLLER_PORT = 0;
+        public static final int DRIVER_LEFT_PORT = 0;        
+        public static final int DRIVER_RIGHT_PORT = 1;                    
+        public static final int COPILOT_CONTROLLER_PORT = 2;
     }
 
     public static class RobotMap {
+        // Drivetain
+        public static final int LEFT_MOTOR_1 = 4;
+        public static final int LEFT_MOTOR_2 = 5;
+        public static final int LEFT_MOTOR_3 = 6;
+        public static final int RIGHT_MOTOR_1 = 1;
+        public static final int RIGHT_MOTOR_2 = 2;
+        public static final int RIGHT_MOTOR_3 = 3;
+
+        public static final int FLYWHEEL_MOTOR = 11;
         public static final int COLLECTOR_MOTOR = 15;
         public static final int INDEXER_MOTOR = 16;
-        public static final int FLYWHEEL_MOTOR = 11;
     }
 
     public static class ShooterConstants {
         public static final double SHOOTER_SPEED_CAP = 0.5; // TODO make sure safe
         public static final double SHOOTER_REV_TIME = 2d; 
+        public static final double SHOOTER_SHOOT_TIME = 3d;
     }
 
     public static class CollectConstants {

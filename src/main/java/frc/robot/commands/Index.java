@@ -14,7 +14,12 @@ public class Index extends CommandBase {
 		this.power = power;
 		addRequirements(indexer);
     }
-
+    
+    @Override
+    public void execute() {
+        indexer.setPower(power.getAsDouble());
+        System.out.println("Im another Ghost good luck!");
+    }
 
 	@Override
 	public void end(boolean interrupted) {
@@ -24,52 +29,5 @@ public class Index extends CommandBase {
     @Override
     public boolean isFinished() {
         return false;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @Override
-    public void execute() {
-        indexer.setPower(power.getAsDouble());
-        System.out.println("Im another Ghost good luck!");
     }
 }
