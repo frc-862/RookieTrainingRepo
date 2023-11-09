@@ -18,7 +18,7 @@ public class Index extends CommandBase {
     @Override
     public void execute() {
         indexer.setPower(power.getAsDouble());
-        System.out.println("Im another Ghost good luck!");
+        // System.out.println("Im another Ghost good luck!");
     }
 
 	@Override

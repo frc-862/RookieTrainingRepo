@@ -14,7 +14,7 @@ public class Indexer extends SubsystemBase {
 
     @Override
     public void periodic() {
-        System.out.println("I AM A GHOST, FIND ME!");
+        // System.out.println("I AM A GHOST, FIND ME!");
     }
     
     public void setPower(double power) {

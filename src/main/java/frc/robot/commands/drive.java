@@ -1,4 +1,4 @@
-// Copyright (c) FIRST and other WPILib contributors.
+ // Copyright (c) FIRST and other WPILib contributors.
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
@@ -19,6 +19,7 @@ public class drive extends CommandBase {
     // Use addRequirements() here to declare subsystem dependencies.
     this.left = left;
     this.right = right;
+    this.drivetrain = drivetrain;
     addRequirements(drivetrain);
   }
 

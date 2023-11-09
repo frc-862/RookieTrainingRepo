@@ -5,6 +5,7 @@ import frc.robot.commands.Collect;
 import frc.robot.commands.Index;
 import frc.robot.commands.Shoot;
 import frc.robot.commands.drive;
+import frc.robot.commands.example;
 import frc.robot.subsystems.Collector;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Indexer;
@@ -41,6 +42,7 @@ public class RobotContainer {
     private void configureBindings() {
 		new Trigger(coPilot::getBButton).whileTrue(new Shoot(indexer, shooter));
 		new Trigger(coPilot::getAButton).whileTrue(new Collect(indexer, collector));
+        new Trigger(coPilot::getXButton).whileTrue(new example(drivetrain, indexer, collector, shooter));
 
         indexer.setDefaultCommand(new Index(indexer, () -> coPilot.getRightTriggerAxis() - coPilot.getLeftTriggerAxis()));
         drivetrain.setDefaultCommand(new drive(drivetrain, () -> right.getY(), () -> left.getX()));
