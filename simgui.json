@@ -1,0 +1,28 @@
+{
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/SmartDashboard/Ele Sim": "Mechanism2d"
+    },
+    "windows": {
+      "/SmartDashboard/Ele Sim": {
+        "window": {
+          "visible": true
+        }
+      }
+    }
+  },
+  "NetworkTables": {
+    "transitory": {
+      "Shuffleboard": {
+        "Elecator": {
+          "open": true
+        },
+        "Elevator": {
+          "open": true
+        },
+        "open": true
+      }
+    }
+  }
+}
